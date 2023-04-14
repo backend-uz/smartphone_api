@@ -47,14 +47,14 @@ for this project we will use a database class to store our data. The database cl
 - [ ] `get_smartphone_by_price` - this method will return a list of smartphone by specifying the smartphone price.
 - [ ] `delete_smartphone` - this method will delete a smartphone from the database.
 
-## CardDB - database class
+## CartDB - database class
 
 for this project we will use a database class to store our data. The database class will have the following methods:
 
 - [ ] `__init__` - the constructor method that will initialize the database class.
 - [ ] `get_all` - this method will return a list of smartphone.
-- [ ] `add_card` - this method will add a new card to the database.
-- [ ] `remove_card` - this method will remove a card from the database.
+- [ ] `add_cart` - this method will add a new cart to the database.
+- [ ] `remove_cart` - this method will remove a cart from the database.
 
 ## Endpoints
 
@@ -65,6 +65,6 @@ for this project we will use a database class to store our data. The database cl
 - [ ] GET `/smartphone/price/<price>` - this endpoint will return a list of smartphone by specifying the smartphone price.
 - [ ] POST `/smartphone/add` - this endpoint will add a new smartphone to the database.
 - [ ] POST `/smartphone/delete/<doc_id>` - this endpoint will delete a smartphone from the database.
-- [ ] GET `/card` - this endpoint will return a list of card.
-- [ ] POST `/card/add` - this endpoint will add a new card to the database.
-- [ ] POST `/card/delete/<doc_id>` - this endpoint will delete a card from the database.
+- [ ] GET `/cart` - this endpoint will return a list of cart.
+- [ ] POST `/cart/add` - this endpoint will add a new cart to the database.
+- [ ] POST `/cart/delete/<doc_id>` - this endpoint will delete a cart from the database.
