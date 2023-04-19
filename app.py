@@ -34,7 +34,7 @@ def smartphone():
 def brands():
     return json.dumps(db.brands())
 
-@app.route('/smartphone/<brand>', methods=['POST'])
+@app.route('/smartphone/<brand>', methods=['POST', 'GET'])
 def by_brand(brand):
     return db.get_phone_list(brand)
 
@@ -56,7 +56,7 @@ def getphone(brand, idx):
 
 @app.route('/cart/<tablename>')
 def cart(tablename):
-    return cartdb.get_all(tablename)
+    return json.dumps(cartdb.get_all(tablename))
 
 @app.route('/cart/add/', methods=['POST'])
 def add_cart():
