@@ -1,6 +1,7 @@
 # simple flask app
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from smartphonedb import DB
+import json
 db = DB('db.json')
 
 app = Flask(__name__)
@@ -10,14 +11,14 @@ def getBrads() -> dict:
     """
     Return list of brands
     """
-    return {"brands":db.get_tables()}
+    return jsonify({"brands":db.get_tables()})
 
 @app.route('/smartphone/<brand>')
 def getPhones(brand) -> dict:
     """
     Return list of phones by brand
     """
-    return {"phones":db.get_phone_list(brand)}
+    return jsonify({"phones":db.get_phone_list(brand)})
 
 @app.route('/smartphone/<brand>/<int:idx>')
 def getPhone(brand,idx) -> dict:
