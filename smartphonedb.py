@@ -2,7 +2,7 @@ from tinydb import TinyDB, Query
 
 class SmartphoneDB:
     def __init__(self) -> None:
-        self.db = TinyDB('db.json', indent=4, separators=(',', ':'))
+        self.db = TinyDB('smartphone_api/db.json', indent=4, separators=(',', ':'))
 
     def brands(self):
         return list(self.db.tables())
