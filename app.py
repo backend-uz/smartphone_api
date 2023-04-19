@@ -36,7 +36,7 @@ def brands():
 
 @app.route('/smartphone/<brand>', methods=['POST', 'GET'])
 def by_brand(brand):
-    return db.get_phone_list(brand)
+    return json.dumps(db.get_phone_list(brand))
 
 @app.route('/smartphone/<brand>/<int:idx>')
 def getphone(brand, idx):

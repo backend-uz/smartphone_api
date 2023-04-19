@@ -16,7 +16,7 @@ class SmartphoneDB:
     
     def get_phone_list(self,brand):
         table = self.db.table(brand)
-        return table.all()
+        return list(table.all())
     
     def delete_smartphone(self):
         pass
