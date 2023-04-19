@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 db = SmartphoneDB()
 cartdb = CartDB()
-url = 'http://127.0.0.1:5000/'
+url = 'https://bacefap.pythonanywhere.com/'
 
 @app.route('/', methods=['GET'])
 def homepage():
