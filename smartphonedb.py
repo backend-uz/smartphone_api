@@ -5,7 +5,7 @@ class SmartphoneDB:
         self.db = TinyDB('smartphone_api/db.json', indent=4, separators=(',', ':'))
 
     def brands(self):
-        return list(self.db.tables())
+        return self.db.tables()
     
     def add(self, brand, phone):
         self.db.table(brand).insert(phone)
