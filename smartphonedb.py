@@ -20,5 +20,5 @@ class SmartphoneDB:
     
     def delete_smartphone(self):
         pass
-db = SmartphoneDB()
-print(db.getPhone('Vivo', 3))
+# db = SmartphoneDB()
+# print(db.getPhone('Vivo', 3))
