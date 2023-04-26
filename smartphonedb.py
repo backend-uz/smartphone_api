@@ -5,7 +5,7 @@ class SmartphoneDB:
         self.db = TinyDB('smartphone_api/db.json', indent=4, separators=(',', ':'))
 
     def brands(self):
-        return self.db.tables()
+        return {self.db.tables()}
     
     def add(self, brand, phone):
         self.db.table(brand).insert(phone)
@@ -20,3 +20,5 @@ class SmartphoneDB:
     
     def delete_smartphone(self):
         pass
+db = SmartphoneDB()
+print(db.getPhone('Vivo', 3))
